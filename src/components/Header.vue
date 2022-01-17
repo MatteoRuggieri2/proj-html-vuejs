@@ -7,7 +7,7 @@
                 <div class="wrapper">
                     <span>We have a 95% Successful Pass Rate!</span>
                     <span>
-                        <span>icon</span>
+                        <span>-- icon -- </span>
                         <span>Give us a call to book your tuition! 1-800-555-555</span>
                     </span>
                 </div>
@@ -54,6 +54,10 @@ export default {
 @import '../style/variables.scss';
 
     header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 
         .header-top {
             padding: 10px 0;
@@ -69,7 +73,7 @@ export default {
 
         .header-bottom {
             padding: 30px 0;
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.5);   // Prendere il colore principale dell'header e schiarirlo
             color: $secondary_color;
             
             .wrapper {
