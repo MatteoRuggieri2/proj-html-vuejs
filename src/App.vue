@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     
-    <Header />
+    <Header :headerLinks="headerLinksArray" />
 
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   },
   data: function() {
     return {
-      headerLinks: [
+      headerLinksArray: [
         {
           name: 'Home',
           active: true,

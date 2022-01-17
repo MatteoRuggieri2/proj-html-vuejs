@@ -27,10 +27,9 @@
                     <!-- Nav -->
                     <nav>
                         <ul>
-                            <li><a href="#">v-for 1</a></li>
-                            <li><a href="#">v-for 2</a></li>
-                            <li><a href="#">v-for 3</a></li>
-                            <li><a href="#">v-for 4</a></li>
+                            <li v-for="(element, index) in headerLinks" :key="index">
+                                <a href="#">{{ element.name }}</a>
+                            </li>
                         </ul>
                         <a class="btn btn-primary" href="#">book now</a>
                     </nav>
@@ -45,8 +44,9 @@
 <script>
 export default {
     name: 'Header',
-
-// ricordati di fare i data con le props per header e footer
+    props: {
+        headerLinks: Array
+    }
 }
 </script>
 
@@ -58,7 +58,7 @@ export default {
         .header-top {
             padding: 10px 0;
             background-color: black;
-            color: white;
+            color: $secondary_color;
             font-size: 14px;
 
             .wrapper {
@@ -70,6 +70,7 @@ export default {
         .header-bottom {
             padding: 30px 0;
             background-color: rgba(0, 0, 0, 0.5);
+            color: $secondary_color;
             
             .wrapper {
                 display: flex;
@@ -78,17 +79,24 @@ export default {
 
                 .logo {
                     width: 230px;
+                    flex-shrink: 0;
                 }
 
                 nav {
                     display: flex;
+                    text-transform: uppercase;
 
                     ul {
+                        display: flex;
+                        align-items: center;
 
                         li {
-                            display: inline-block;
                             margin: 0 20px;
                         }
+                    }
+
+                    .btn {
+                        margin-left: 20px;
                     }
                 }
             }
