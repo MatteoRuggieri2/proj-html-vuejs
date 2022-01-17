@@ -14,6 +14,42 @@ export default {
   components: {
     Header,
   },
+  data: function() {
+    return {
+      headerLinks: [
+        {
+          name: 'Home',
+          active: true,
+          new: false
+        },
+        {
+          name: 'About',
+          active: false,
+          new: false
+        },
+        {
+          name: 'Prices',
+          active: false,
+          new: false
+        },
+        {
+          name: 'Courses',
+          active: false,
+          new: true
+        },
+        {
+          name: 'Locations',
+          active: false,
+          new: false
+        },
+        {
+          name: 'Blog',
+          active: false,
+          new: false
+        }
+      ]
+    }
+  }
 
   // ricordati di fare i data con le props per header e footer
   // installare fontawesome
