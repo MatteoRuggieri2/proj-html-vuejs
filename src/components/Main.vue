@@ -20,24 +20,32 @@
         <section class="first-lesson-sect">
             <div class="container">
                 <div class="wrapper">
-                    <div class="col-50">
+                    <div class="col-45">
                         <h2>Get Behind The Wheel</h2>
                         <h4>Lorem ipsum dolor sit amet Temconsectetur adipisicing elit. Quaerat, tempore sed. dolor sit amet consectetur adipisicing elit.</h4>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempore sed. Tempore eligendi, alias ipsam neque perspiciatis qui blanditiis illo non, perferendis omnis labore officia nisi inventore molestias magnam voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempore sed. Tempore eligendi, alias ipsam neque perspiciatis qui blanditiis illo non, perferendis omnis labore officia nisi inventore molestias magnam voluptas.</p>
                     </div>
-                    <div class="col-50">
-                        first lesson free
+                    <div class="col-45">
+                        <FirstLessonRequest />
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Section - Courses -->
+
+
     </main>
 </template>
 
 <script>
+import FirstLessonRequest from "./FirstLessonRequest.vue";
+
 export default {
-    name: 'Main'
+    name: 'Main',
+    components: {
+        FirstLessonRequest
+    },
 }
 </script>
 
@@ -45,6 +53,8 @@ export default {
 @import '../style/variables.scss';
 
     main {
+
+        // Jumbotron
         .jumbotron {
             // min-height: 80vh;
             background-image: url('../assets/img/homepage-hero-background.jpg');
@@ -70,10 +80,12 @@ export default {
             }
         }
 
+        // Section - First Lesson
         .first-lesson-sect {
 
             .wrapper {
                 display: flex;
+                justify-content: space-between;
 
                 h2 {
                     margin-bottom: 30px;

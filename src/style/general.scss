@@ -12,8 +12,8 @@
     margin: 0 auto;
 }
 
-.col-50 {
-    width: 50%;
+.col-45 {
+    width: 45%;
 }
 
 section {
@@ -41,4 +41,5 @@ a {
 .btn-primary {
     background-color: $primary-color;
     padding: 10px 20px;
+    color: $secondary_color;
 }
