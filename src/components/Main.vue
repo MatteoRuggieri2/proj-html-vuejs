@@ -33,6 +33,30 @@
         </section>
 
         <!-- Section - Courses -->
+        <section class="courses-sect">
+            
+            <!-- Number Banner -->
+            <div class="number-banner">
+                <div class="container">
+                    <div class="wrapper">
+                        <div>
+                            <h2>Start Learning to Drive Today</h2>
+                            <h3>Give us a call to shedule your first driving lesson</h3>
+                        </div>
+                        <div>
+                            <span>--icon-- </span>
+                            <h2 class="telephone-number">1-800-555-555</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses -->
+            <div>
+                
+            </div>
+
+        </section>
 
 
     </main>
@@ -89,7 +113,7 @@ export default {
 
                 h2 {
                     margin-bottom: 30px;
-                    font-size: 40px;
+                    font-size: $section_title_font_size;
                 }
 
                 h4 {
@@ -101,6 +125,35 @@ export default {
                     font-size: 18px;
                 }
             }
+        }
+
+        // Section - Courses
+        .courses-sect {
+
+            .number-banner {
+                padding-top: 80px;
+                padding-bottom: 100px;
+                color: $secondary_color;
+                background-image: url('../assets/img/horizontal-cta-background.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                .wrapper {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h2 {
+                        font-size: $section_title_font_size;
+                    }
+
+                    .telephone-number {
+                        display: inline-block;
+                    }
+                }
+            }
+
         }
     }
 
