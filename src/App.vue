@@ -2,7 +2,8 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" />
+    <Main :courses="coursesArray" />
+    <!-- <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" /> -->
 
   </div>
 </template>
@@ -65,20 +66,20 @@ export default {
           img: 'courses-instructor.jpg'
         },
       ],
-      percentagesLabelsArray: [
-        {
-          name: 'pass rate',
-          percentage: '95%'
-        },
-        {
-          name: 'referral rate',
-          percentage: '100%'
-        },
-        {
-          name: 'accident rate',
-          percentage: '0%'
-        }
-      ]
+      // percentagesLabelsArray: [
+      //   {
+      //     name: 'pass rate',
+      //     percentage: '95%'
+      //   },
+      //   {
+      //     name: 'referral rate',
+      //     percentage: '100%'
+      //   },
+      //   {
+      //     name: 'accident rate',
+      //     percentage: '0%'
+      //   }
+      // ]
     }
   }
 
@@ -89,5 +90,28 @@ export default {
 
 <style lang="scss">
 @import './style/general.scss';
+
+  // Personalizzazione scrollbar
+  ::-webkit-scrollbar{
+    width:0.5em;
+    height:0.5em;
+    background: rgb(255, 255, 255);
+  }
+  ::-webkit-scrollbar-thumb{
+    border-radius:4px;
+    background-color: $primary_color;
+    // border: none;
+    border: 1px solid white;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(49, 172, 0);
+    // border: none;
+    border: 1px solid white;
+  }
+  
+  ::-webkit-scrollbar-thumb:active{
+    background-color:rgb(40, 141, 0);
+    border: none;
+  }
 
 </style>

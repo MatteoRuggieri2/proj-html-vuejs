@@ -76,7 +76,7 @@
 
                     <!-- Percentage Cards -->
                     <div class="percentage-card-container">
-                        <div class="col-30">
+                        <div class="col-32">
                             <div class="card">
                                 <div class="circle">95%</div>
                                 <div class="percentage-name">pass rate</div>
@@ -88,7 +88,7 @@
                                 <div class="percentage-name">referral rate</div>
                             </div>
                         </div>
-                        <div class="col-30">
+                        <div class="col-32">
                             <div class="card">
                                 <div class="circle">0%</div>
                                 <div class="percentage-name">accident rate</div>
@@ -115,7 +115,7 @@
                     </div>
 
                     <div class="col-40">
-                        <a class="btn btn-primary" href="#">more about us</a>
+                        <a class="btn button-100 btn-primary" href="#">more about us</a>
                     </div>
                 </div>
             </div>
@@ -234,6 +234,7 @@ export default {
 
                 .wrapper {
                     display: flex;
+                    justify-content: space-between;
 
                     .course-info-tab {
                         // margin: 50px 0;
@@ -266,12 +267,13 @@ export default {
                     }
 
                     .courses-container {
-                        padding: 0 20px;
                         display: flex;
+                        justify-content: space-around;
                     }
                 }
 
                 .percentage-card-container {
+                    width: 60%;
                     display: flex;
                     justify-content: space-between;
                     position: absolute;
@@ -327,9 +329,22 @@ export default {
 
         // Section - Instructors
         .instructors-sect {
+            padding-top: 90px;
 
             .wrapper {
                 display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                h3 {
+                    font-size: $section_title_font_size;
+                    margin-bottom: 50px;
+                }
+
+                p {
+                    font-size: 20px;
+                    padding-right: 20px;
+                }
             }
 
         }

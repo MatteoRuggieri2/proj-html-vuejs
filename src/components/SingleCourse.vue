@@ -19,9 +19,7 @@ export default {
 @import '../style/variables.scss';
 
     .single-course {
-        // background-color: mediumturquoise;
-        // border: 1px solid black;
-        padding: 0 20px;
+        padding-left: 40px;
         text-align: center;
         color: $third_color;
 

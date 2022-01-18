@@ -13,8 +13,8 @@
 }
 
 // Columns
-.col-30 {
-    width: 30%;
+.col-32 {
+    width: 32%;
 }
 
 .col-40 {
@@ -54,6 +54,11 @@ a {
 // BUTTON
 .btn {
     display: inline-block;
+    text-align: center;
+}
+
+.button-100 {
+    width: 100%;
 }
 
 .btn-primary {
