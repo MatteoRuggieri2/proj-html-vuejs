@@ -52,8 +52,26 @@
             </div>
 
             <!-- Courses -->
-            <div>
-                
+            <div class="courses">
+                <div class="container">
+                    <div class="wrapper">
+
+                        <!-- Course Info Tab -->
+                        <div class="col-40">
+                            <div class="course-info-tab">
+                                <h2>Courses</h2>
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid labore eligendi esse quibusdam modi, iusto amet tempore obcaecati est aspernatur minus quas quod nisi incidunt excepturi numquam maxime officia sapiente.</p>
+                                <a class="btn btn-primary" href="#">course information</a>
+                                <img class="new-tag-img" src="../assets/img/new-corner.jpg" alt="Tag 'New'">
+                            </div>
+                        </div>
+
+                        <!-- Courses -->
+                        <div class="col-60">
+                            <SingleCourse />
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </section>
@@ -64,12 +82,17 @@
 
 <script>
 import FirstLessonRequest from "./FirstLessonRequest.vue";
+import SingleCourse from "./SingleCourse.vue";
 
 export default {
     name: 'Main',
     components: {
-        FirstLessonRequest
+        FirstLessonRequest,
+        SingleCourse
     },
+    props: {
+        courses: Array
+    }
 }
 </script>
 
@@ -150,6 +173,48 @@ export default {
 
                     .telephone-number {
                         display: inline-block;
+                    }
+                }
+            }
+
+            .courses {
+                padding: 80px 0;
+                background-image: url('../assets/img/promise-background.jpg');
+                background-size: cover;
+                background-position: bottom;
+                background-repeat: no-repeat;
+
+                .wrapper {
+                    display: flex;
+
+                    .course-info-tab {
+                        // margin: 50px 0;
+                        padding: 50px;
+                        text-align: center;
+                        background-color: white;
+                        border: 1px solid black;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        position: relative;
+                        bottom: 120px;
+                        left: 0;
+
+                        h2 {
+                            margin-bottom: 40px;
+                            font-size: $section_title_font_size;
+                        }
+
+                        p {
+                            margin-bottom: 30px;
+                        }
+
+                        .new-tag-img {
+                            display: block;
+                            width: 15%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
                     }
                 }
             }

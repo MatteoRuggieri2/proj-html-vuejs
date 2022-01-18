@@ -2,7 +2,7 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main />
+    <Main :courses="coursesArray" />
 
   </div>
 </template>
@@ -50,6 +50,20 @@ export default {
           active: false,
           new: false
         }
+      ],
+      coursesArray: [
+        {
+          name: 'Pass Plus',
+          img: 'courses-passplus.jpg'
+        },
+        {
+          name: 'Intensive Course',
+          img: 'course-intensive.jpg'
+        },
+        {
+          name: 'Instructors',
+          img: 'courses-instructor.jpg'
+        },
       ]
     }
   }
