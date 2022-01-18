@@ -105,6 +105,22 @@
 
         </section>
 
+        <!-- Section - Instructors -->
+        <section class="instructors-sect">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="col-60">
+                        <h3>Your Instructors</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur omnis praesentium reprehenderit. Magnam aliquid veniam ipsum quo, necessitatibus blanditiis laborum tenetur aut iure beatae nobis. Tempora corporis delectus quae incidunt.</p>
+                    </div>
+
+                    <div class="col-40">
+                        <a class="btn btn-primary" href="#">more about us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 </template>
@@ -209,6 +225,7 @@ export default {
 
             .courses {
                 padding: 80px 0 150px;
+                margin-bottom: 150px;
                 background-image: url('../assets/img/promise-background.jpg');
                 background-size: cover;
                 background-position: bottom;
@@ -304,6 +321,15 @@ export default {
                     bottom: 0;
                     left: 0;
                 }
+            }
+
+        }
+
+        // Section - Instructors
+        .instructors-sect {
+
+            .wrapper {
+                display: flex;
             }
 
         }
