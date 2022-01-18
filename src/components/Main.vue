@@ -66,12 +66,21 @@
                             </div>
                         </div>
 
-                        <!-- Courses -->
+                        <!-- Courses Container -->
                         <div class="col-60">
-                            <SingleCourse />
+                            <div class="courses-container">
+                                <SingleCourse v-for="(element, index) in courses" :key="index" :singleCourse="element" />
+                            </div>
                         </div>
                     </div>
                 </div>
+                
+                <!-- <img class="latestnews-bottom" src="../assets/img/latestnews-bottom.png" alt=""> -->
+
+                <svg class="latestnews-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                    <path fill="#ffffff" fill-opacity="1" d="M0,192L720,288L1440,192L1440,320L720,320L0,320Z"></path>
+                </svg>
+                
             </div>
 
         </section>
@@ -178,11 +187,12 @@ export default {
             }
 
             .courses {
-                padding: 80px 0;
+                padding: 80px 0 150px;
                 background-image: url('../assets/img/promise-background.jpg');
                 background-size: cover;
                 background-position: bottom;
                 background-repeat: no-repeat;
+                position: relative;
 
                 .wrapper {
                     display: flex;
@@ -216,6 +226,18 @@ export default {
                             left: 0;
                         }
                     }
+
+                    .courses-container {
+                        padding: 0 20px;
+                        display: flex;
+                    }
+                }
+
+                .latestnews-bottom {
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
                 }
             }
 
