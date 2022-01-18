@@ -73,10 +73,15 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Percentage Cards -->
+                    <div class="percentage-card-container">
+                        <PercentageCard />
+                        <PercentageCard />
+                        <PercentageCard />
+                    </div>
                 </div>
                 
-                <!-- <img class="latestnews-bottom" src="../assets/img/latestnews-bottom.png" alt=""> -->
-
                 <svg class="latestnews-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#ffffff" fill-opacity="1" d="M0,192L720,288L1440,192L1440,320L720,320L0,320Z"></path>
                 </svg>
@@ -92,15 +97,18 @@
 <script>
 import FirstLessonRequest from "./FirstLessonRequest.vue";
 import SingleCourse from "./SingleCourse.vue";
+import PercentageCard from "./PercentageCard.vue";
 
 export default {
     name: 'Main',
     components: {
         FirstLessonRequest,
-        SingleCourse
+        SingleCourse,
+        PercentageCard
     },
     props: {
-        courses: Array
+        courses: Array,
+        percentagesArray: Array
     }
 }
 </script>
@@ -231,6 +239,14 @@ export default {
                         padding: 0 20px;
                         display: flex;
                     }
+                }
+
+                .percentage-card-container {
+                    display: flex;
+
+                    // test
+                    background-color: darkcyan;
+                    border: 2px solid red;
                 }
 
                 .latestnews-bottom {

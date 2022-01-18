@@ -2,7 +2,7 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main :courses="coursesArray" />
+    <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" />
 
   </div>
 </template>
@@ -64,6 +64,20 @@ export default {
           name: 'Instructors',
           img: 'courses-instructor.jpg'
         },
+      ],
+      percentagesLabelsArray: [
+        {
+          name: 'pass rate',
+          percentage: '95%'
+        },
+        {
+          name: 'referral rate',
+          percentage: '100%'
+        },
+        {
+          name: 'accident rate',
+          percentage: '0%'
+        }
       ]
     }
   }
