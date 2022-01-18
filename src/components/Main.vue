@@ -76,9 +76,24 @@
 
                     <!-- Percentage Cards -->
                     <div class="percentage-card-container">
-                        <PercentageCard />
-                        <PercentageCard />
-                        <PercentageCard />
+                        <div class="col-30">
+                            <div class="card">
+                                <div class="circle">95%</div>
+                                <div class="percentage-name">pass rate</div>
+                            </div>
+                        </div>
+                        <div class="center">
+                            <div class="card">
+                                <div class="circle">100%</div>
+                                <div class="percentage-name">referral rate</div>
+                            </div>
+                        </div>
+                        <div class="col-30">
+                            <div class="card">
+                                <div class="circle">0%</div>
+                                <div class="percentage-name">accident rate</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -97,14 +112,12 @@
 <script>
 import FirstLessonRequest from "./FirstLessonRequest.vue";
 import SingleCourse from "./SingleCourse.vue";
-import PercentageCard from "./PercentageCard.vue";
 
 export default {
     name: 'Main',
     components: {
         FirstLessonRequest,
         SingleCourse,
-        PercentageCard
     },
     props: {
         courses: Array,
@@ -243,10 +256,46 @@ export default {
 
                 .percentage-card-container {
                     display: flex;
+                    justify-content: space-between;
+                    position: absolute;
+                    top: 75%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 2;
 
                     // test
-                    background-color: darkcyan;
-                    border: 2px solid red;
+                    // background-color: darkcyan;
+                    // border: 2px solid red;
+
+                    .center {
+                        flex-grow: 1;
+                        margin: 0 10px;
+                    }
+
+                    .card {
+                        background-color: white;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding: 50px;
+                        border-top: 6px solid $primary_color;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+
+                        // test
+                        // border: 1px solid black;
+
+                        .circle {
+                            margin-bottom: 50px;
+                            width: 11vw;
+                            height: 11vw;
+                            border-radius: 50%;
+                            border: 10px solid $primary_color;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
                 }
 
                 .latestnews-bottom {
