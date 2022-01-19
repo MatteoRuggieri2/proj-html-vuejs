@@ -78,19 +78,70 @@
                     <div class="percentage-card-container">
                         <div class="col-32">
                             <div class="card-primary">
-                                <div class="circle">95%</div>
+                                
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path class="circle"
+                                        stroke-dasharray="95, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="20.35" class="percentage">95%</text>
+                                    </svg>
+                                </div>
+
                                 <div class="percentage-name">pass rate</div>
                             </div>
                         </div>
                         <div class="col-center">
                             <div class="card-primary">
-                                <div class="circle">100%</div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path class="circle"
+                                        stroke-dasharray="100, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="20.35" class="percentage">100%</text>
+                                    </svg>
+                                </div>
+
                                 <div class="percentage-name">referral rate</div>
                             </div>
                         </div>
                         <div class="col-32">
                             <div class="card-primary">
-                                <div class="circle">0%</div>
+
+                                <div class="single-chart">
+                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
+                                    <path class="circle-bg"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <path class="circle"
+                                        stroke-dasharray="0, 100"
+                                        d="M18 2.0845
+                                        a 15.9155 15.9155 0 0 1 0 31.831
+                                        a 15.9155 15.9155 0 0 1 0 -31.831"
+                                    />
+                                    <text x="18" y="20.35" class="percentage">0%</text>
+                                    </svg>
+                                </div>
+
                                 <div class="percentage-name">accident rate</div>
                             </div>
                         </div>
@@ -345,15 +396,46 @@ export default {
                     .card-primary {
                         padding: 50px;
 
+                        .single-chart {
+                            width: 100%;
+                            justify-content: space-around ;
+                        }
+
+                        .circular-chart {
+                            display: block;
+                            margin: 10px auto;
+                            max-width: 100%;
+                            max-height: 250px;
+                        }
+
+                        .circle-bg {
+                            fill: none;
+                            stroke: #eee;
+                            stroke-width: 1.6;
+                        }
+
                         .circle {
-                            margin-bottom: 50px;
-                            width: 11vw;
-                            height: 11vw;
-                            border-radius: 50%;
-                            border: 10px solid $primary_color;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
+                            fill: none;
+                            stroke-width: 1.6;
+                            stroke-linecap: round;
+                            animation: progress 1s ease-out forwards;
+                        }
+
+                        @keyframes progress {
+                            0% {
+                                stroke-dasharray: 0 100;
+                            }
+                        }
+
+                        .circular-chart.primary-col .circle {
+                            stroke: $primary_color;
+                        }
+
+                        .percentage {
+                            fill: #666;
+                            font-family: sans-serif;
+                            font-size: 0.5em;
+                            text-anchor: middle;
                         }
                     }
                 }
