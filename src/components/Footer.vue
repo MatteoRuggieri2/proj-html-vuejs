@@ -41,13 +41,15 @@
 
                     <!-- Column 4 -->
                     <div class="col-25">
-                        <div class="percentage-img-1">
-                            <img src="../assets/img/labels.png" alt="percentage details">
+                        <div class="footer-percentage">
+                            <div class="percentage-img-1">
+                                <img src="../assets/img/labels.png" alt="percentage details">
+                            </div>
+                            <div class="percentage-img-2">
+                                <img src="../assets/img/labels.png" alt="percentage details">
+                            </div>
+                            <a class="footer-btn btn btn-primary" href="#">book now</a>
                         </div>
-                        <div class="percentage-img-2">
-                            <img src="../assets/img/labels.png" alt="percentage details">
-                        </div>
-                        <a class="footer-btn btn btn-primary" href="#">book now</a>
                     </div>
 
                 </div>
@@ -139,6 +141,35 @@ export default {
                             }
                         }
                     }
+
+                    .footer-percentage {
+                        text-align: center;
+
+                        .percentage-img-1 {
+                            overflow: hidden;
+                            
+                            img {
+                                width: 200%;
+                            }
+                        }
+
+                        .percentage-img-2 {
+                            overflow: hidden;
+                            
+                            img {
+                                width: 200%;
+                                transform: translateX(-51%);
+                            }
+                        }
+                        
+                        a {
+                            &.btn {
+                                margin: 20px 0;
+                                padding: 5px 30px;
+                            }
+                        }
+                    }
+
 
                     
                 }

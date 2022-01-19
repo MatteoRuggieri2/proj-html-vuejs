@@ -81,6 +81,10 @@ a {
     font-weight: 700;
 }
 
+.btn-primary:hover {
+    background-color: #85b680;
+}
+
 .btn-bckg-blue {
     border: 3px solid $third_color;
     padding: 8px 20px;
@@ -89,6 +93,11 @@ a {
     text-transform: uppercase;
     font-size: 13px;
     font-weight: 700;
+}
+
+.btn-bckg-blue:hover {
+    border-color: $primary_color;
+    color: $primary_color;
 }
 
 .button-100 {
