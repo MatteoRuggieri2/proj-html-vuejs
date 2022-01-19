@@ -5,7 +5,7 @@
 
         <!-- Single Card -->
         <div v-for="(element, index) in percentages" :key="index" class="col-32">
-            <div class="card-primary">
+            <div class="card-primary box-shadow">
                                 
                 <div class="single-chart">
                     <svg viewBox="0 0 36 36" class="circular-chart primary-col">
@@ -51,10 +51,11 @@ export default {
         display: flex;
         justify-content: space-between;
         position: absolute;
-        top: 75%;
+        top: 72%;
         left: 50%;
         transform: translateX(-50%);
         z-index: 2;
+        color: $primary_text_color;
 
         .card-primary {
             padding: 50px;
@@ -95,10 +96,16 @@ export default {
             }
 
             .percentage {
-                fill: #666;
+                fill: $primary_text_color;
                 font-family: sans-serif;
                 font-size: 0.5em;
                 text-anchor: middle;
+            }
+
+            .percentage-name {
+                text-transform: uppercase;
+                font-weight: bold;
+                margin: 20px 0 25px;
             }
         }
     }

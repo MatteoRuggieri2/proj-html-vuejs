@@ -71,23 +71,32 @@ a {
     text-align: center;
 }
 
-.button-100 {
-    width: 100%;
-}
-
 .btn-primary {
     background-color: $primary-color;
     padding: 10px 25px;
     color: $secondary_color;
     border-radius: 20px;
     text-transform: uppercase;
+    font-size: 15px;
     font-weight: 700;
 }
 
 .btn-bckg-blue {
-    border: 2px solid $third_color;
-    padding: 10px 20px;
+    border: 3px solid $third_color;
+    padding: 8px 20px;
+    border-radius: 20px;
     color: $third_color;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.button-100 {
+    width: 100%;
+}
+
+.button-lg {
+    padding: 10px 100px;
 }
 
 // Input
@@ -97,7 +106,9 @@ a {
     margin-bottom: 30px;
     padding: 15px 10px;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #d8d8d8;
+    background-color: #f7f7f7;
+    color: rgb(190, 190, 190);
 }
 
 // CARD  ----  posso fare un mixin
@@ -108,7 +119,6 @@ a {
     align-items: center;
     border-top: 6px solid $primary_color;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
 
     // test
     // border: 1px solid black;
@@ -117,4 +127,9 @@ a {
 // Text Color
 .text-primary {
     color: $primary_color
+}
+
+// Box-shadow
+.box-shadow {
+    box-shadow: 0px 20px 20px 0 rgb(230, 230, 230);
 }

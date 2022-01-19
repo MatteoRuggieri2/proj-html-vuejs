@@ -22,8 +22,8 @@
                 <div class="wrapper">
                     <div class="col-45">
                         <h2>Get Behind The Wheel</h2>
-                        <h4>Lorem ipsum dolor sit amet Temconsectetur adipisicing elit. Quaerat, tempore sed. dolor sit amet consectetur adipisicing elit.</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempore sed. Tempore eligendi, alias ipsam neque perspiciatis qui blanditiis illo non, perferendis omnis labore officia nisi inventore molestias magnam voluptas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, tempore sed. Tempore eligendi, alias ipsam neque perspiciatis qui blanditiis illo non, perferendis omnis labore officia nisi inventore molestias magnam voluptas.</p>
+                        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur ocipisciig elti Nuncultrices Quctor sapien id cursus. Aliquam maximis turpis n veliculo semper. Fusce et ultrices libero, at suscipit lacus. Sed vitae fringilla nibh. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in velhicula semper. Fusce et ultrices libero, at suscipit lacus. Sed vitae fringilla nlbh.</p>
                     </div>
                     <div class="col-45">
                         <FirstLessonRequest />
@@ -44,7 +44,7 @@
                             <h3>Give us a call to shedule your first driving lesson</h3>
                         </div>
                         <div>
-                            <span>--icon-- </span>
+                            <span class="phone-icon"><i class="fas fa-phone"></i></span>
                             <h2 class="telephone-number">1-800-555-555</h2>
                         </div>
                     </div>
@@ -58,9 +58,9 @@
 
                         <!-- Course Info Tab -->
                         <div class="col-40">
-                            <div class="course-info-tab">
+                            <div class="course-info-tab box-shadow">
                                 <h2>Courses</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid labore eligendi esse quibusdam modi, iusto amet tempore obcaecati est aspernatur minus quas quod nisi incidunt excepturi numquam maxime officia sapiente.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</p>
                                 <a class="btn btn-primary" href="#">course information</a>
                                 <img class="new-tag-img" src="../assets/img/new-corner.jpg" alt="Tag 'New'">
                             </div>
@@ -92,11 +92,11 @@
                 <div class="wrapper">
                     <div class="col-60">
                         <h3>Your Instructors</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur omnis praesentium reprehenderit. Magnam aliquid veniam ipsum quo, necessitatibus blanditiis laborum tenetur aut iure beatae nobis. Tempora corporis delectus quae incidunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur odipiscing elit. Nunc ultrices auctor sapien id cursus. Aliquam maximus turpis in vehicula semper.</p>
                     </div>
 
                     <div class="col-40">
-                        <a class="btn button-100 btn-primary" href="#">more about us</a>
+                        <a class="btn button-lg btn-primary" href="#">more about us</a>
                     </div>
                 </div>
 
@@ -113,16 +113,16 @@
         <section class="testimonials-sect">
             <div class="container">
                 <h2>Testimonials</h2>
-                <span>Here's what our happy drivers had to say about our services:</span>
+                <span class="testimonial-subtitle">Here's what our happy drivers had to say about our services:</span>
                 <img class="testimonial-img" src="../assets/img/testimonial-sophia.png" alt="Testimonial Sophia">
                 <p class="testimonial-description">Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first pass! Highly recommended.</p>
                 <span class="testimonial-name">Sophia Jones</span>
                 <div>
-                    <span>fc</span>
-                    <span>c</span>
-                    <span>c</span>
-                    <span>c</span>
-                    <span>c</span>
+                    <span class="circle-icon"><i class="fas fa-circle"></i></span>
+                    <span class="circle-icon"><i class="far fa-circle"></i></span>
+                    <span class="circle-icon"><i class="far fa-circle"></i></span>
+                    <span class="circle-icon"><i class="far fa-circle"></i></span>
+                    <span class="circle-icon"><i class="far fa-circle"></i></span>
                 </div>
             </div>
         </section>
@@ -223,15 +223,21 @@ export default {
                 h2 {
                     margin-bottom: 30px;
                     font-size: $section_title_font_size;
+                    color: $title_text_color;
                 }
 
                 h4 {
                     margin-bottom: 20px;
-                    font-size: 24px;
+                    font-size: 20px;
+                    font-weight: normal;
+                    color: $primary_text_color;
+                    line-height: 40px;
                 }
 
                 p {
-                    font-size: 18px;
+                    font-size: 15px;
+                    line-height: 30px;
+                    color: $primary_text_color;
                 }
             }
         }
@@ -257,8 +263,14 @@ export default {
                         font-size: $section_title_font_size;
                     }
 
+                    .phone-icon {
+                        font-size: 30px;
+                        margin-right: 30px;
+                    }
+
                     .telephone-number {
                         display: inline-block;
+                        font-weight: normal;
                     }
                 }
             }
@@ -280,7 +292,6 @@ export default {
                         padding: 50px;
                         text-align: center;
                         background-color: white;
-                        border: 1px solid black;
                         border-radius: 10px;
                         overflow: hidden;
                         position: relative;
@@ -291,10 +302,15 @@ export default {
                         h2 {
                             margin-bottom: 40px;
                             font-size: $section_title_font_size;
+                            color: $title_text_color;
                         }
 
                         p {
                             margin-bottom: 30px;
+                            color: $primary_text_color;
+                            font-size: 16px;
+                            line-height: 30px;
+
                         }
 
                         .new-tag-img {
@@ -332,13 +348,23 @@ export default {
                 align-items: center;
 
                 h3 {
+                    color: $title_text_color;
                     font-size: $section_title_font_size;
-                    margin-bottom: 50px;
+                    margin: 50px 0;
                 }
 
                 p {
                     font-size: 20px;
-                    padding-right: 20px;
+                    color: $primary_text_color;
+                    line-height: 40px;
+                }
+
+                .col-40 {
+                    text-align: right;
+
+                    a {
+                        margin-top: 100px;
+                    }
                 }
             }
 
@@ -360,10 +386,18 @@ export default {
             background-repeat: no-repeat;
             text-align: center;
             padding: 200px 0 100px;
+            color: $primary_text_color;
 
             h2 {
-                margin-bottom: 30px;
+                margin-bottom: 10px;
                 font-size: $section_title_font_size;
+                color: $title_text_color;
+            }
+
+            .testimonial-subtitle {
+                display: inline-block;
+                font-size: 20px;
+                margin-bottom: 20px;
             }
 
             .testimonial-img {
@@ -375,11 +409,23 @@ export default {
             .testimonial-description {
                 width: 60%;
                 margin: 0 auto 40px;
+                font-size: 18px;
+                line-height: 35px;
+                letter-spacing: 2px;
             }
 
             .testimonial-name {
                 display: inline-block;
                 margin-bottom: 40px;
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+
+            .circle-icon {
+                margin: 0 5px;
+                font-size: 13px;
+                cursor: pointer;
             }
         }
 
@@ -390,20 +436,23 @@ export default {
             background-size: cover;
             background-repeat: no-repeat;
             padding: 0 0 130px;
+            color: $primary_text_color;
 
             .news-container {
                 width: 100%;
-                padding: 50px 45px;
+                padding: 50px 45px 30px;
                 border-radius: 10px 10px 0 0;
                 background-color: white;
                 border-top: 6px solid $third_color;
                 text-align: center;
                 position: relative;
                 bottom: 40px;
+                box-shadow: 0px 10px 30px 0 rgb(66, 119, 150);
 
                 h2 {
                     font-size: $section_title_font_size;
                     margin-bottom: 60px;
+                    color: $title_text_color;
                 }
 
                 .newscard-container {
@@ -429,6 +478,7 @@ export default {
             h3 {
                 font-size: 30px;
                 padding-bottom: 40px;
+                color: $title_text_color;
             }
 
             a {
@@ -437,6 +487,7 @@ export default {
 
             .subscription-description {
                 font-size: 13px;
+                color: $primary_text_color;
 
             }
         }

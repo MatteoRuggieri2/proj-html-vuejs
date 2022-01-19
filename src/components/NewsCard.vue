@@ -41,11 +41,15 @@ export default {
 
         .info-news {
             margin-bottom: 20px;
-            font-size: 14px;
+            font-size: 12px;
 
             .comments {
                 color: $primary_color;
             }
+        }
+
+        p {
+            font-size: 16px;
         }
     }
 

@@ -29,6 +29,7 @@ export default {
         }
 
         h3 {
+            font-size: 20px;
             margin-bottom: 15px;
         }
     }

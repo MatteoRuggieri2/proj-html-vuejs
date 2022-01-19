@@ -161,7 +161,7 @@ export default {
                 display: inline-block;
                 width: 65px;
                 height: 65px;
-                margin: 5px 10px;
+                margin: 2px 10px;
                 padding: 10px;
                 background-color: white;
                 font-size: 11px;
@@ -172,9 +172,7 @@ export default {
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-
-                // test
-                border: 1px solid black;
+                box-shadow: 0px 10px 20px 0 rgb(156, 156, 156);
 
                 .wallet-icon {
                     font-size: 20px;
