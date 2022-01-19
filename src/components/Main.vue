@@ -276,7 +276,6 @@ export default {
                     justify-content: space-between;
 
                     .course-info-tab {
-                        // margin: 50px 0;
                         padding: 50px;
                         text-align: center;
                         background-color: white;
@@ -286,6 +285,7 @@ export default {
                         position: relative;
                         bottom: 120px;
                         left: 0;
+                        z-index: 10;
 
                         h2 {
                             margin-bottom: 40px;

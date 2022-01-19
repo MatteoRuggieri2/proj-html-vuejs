@@ -22,6 +22,7 @@ export default {
         padding-left: 40px;
         text-align: center;
         color: $third_color;
+        z-index: 10;
 
         img {
             margin-bottom: 20px;
