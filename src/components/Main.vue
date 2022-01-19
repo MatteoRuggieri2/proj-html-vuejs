@@ -77,19 +77,19 @@
                     <!-- Percentage Cards -->
                     <div class="percentage-card-container">
                         <div class="col-32">
-                            <div class="card">
+                            <div class="card-primary">
                                 <div class="circle">95%</div>
                                 <div class="percentage-name">pass rate</div>
                             </div>
                         </div>
-                        <div class="center">
-                            <div class="card">
+                        <div class="col-center">
+                            <div class="card-primary">
                                 <div class="circle">100%</div>
                                 <div class="percentage-name">referral rate</div>
                             </div>
                         </div>
                         <div class="col-32">
-                            <div class="card">
+                            <div class="card-primary">
                                 <div class="circle">0%</div>
                                 <div class="percentage-name">accident rate</div>
                             </div>
@@ -118,6 +118,31 @@
                         <a class="btn button-100 btn-primary" href="#">more about us</a>
                     </div>
                 </div>
+
+                <!-- Instructors-container -->
+                <div class="instructor-container">
+
+                    <InstructorCard v-for="(element, index) in instructors" :key="index" :singleInstructor="element" />
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section - Testimonials -->
+        <section class="testimonials-sect">
+            <div class="container">
+                <h2>Testimonials</h2>
+                <span>Here's what our happy drivers had to say about our services:</span>
+                <img class="testimonial-img" src="../assets/img/testimonial-sophia.png" alt="Testimonial Sophia">
+                <p class="testimonial-description">Avada Driving School really helped build my confidence behind the wheel and with driving in general, and they got me a first pass! Highly recommended.</p>
+                <span class="testimonial-name">Sophia Jones</span>
+                <div>
+                    <span>fc</span>
+                    <span>c</span>
+                    <span>c</span>
+                    <span>c</span>
+                    <span>c</span>
+                </div>
             </div>
         </section>
 
@@ -128,16 +153,19 @@
 <script>
 import FirstLessonRequest from "./FirstLessonRequest.vue";
 import SingleCourse from "./SingleCourse.vue";
+import InstructorCard from "./InstructorCard.vue";
 
 export default {
     name: 'Main',
     components: {
         FirstLessonRequest,
         SingleCourse,
+        InstructorCard
     },
     props: {
         courses: Array,
-        percentagesArray: Array
+        percentagesArray: Array,
+        instructors: Array
     }
 }
 </script>
@@ -286,23 +314,8 @@ export default {
                     // background-color: darkcyan;
                     // border: 2px solid red;
 
-                    .center {
-                        flex-grow: 1;
-                        margin: 0 10px;
-                    }
-
-                    .card {
-                        background-color: white;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
+                    .card-primary {
                         padding: 50px;
-                        border-top: 6px solid $primary_color;
-                        border-radius: 10px;
-                        box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
-
-                        // test
-                        // border: 1px solid black;
 
                         .circle {
                             margin-bottom: 50px;
@@ -329,7 +342,7 @@ export default {
 
         // Section - Instructors
         .instructors-sect {
-            padding-top: 90px;
+            padding: 90px 0 50px;
 
             .wrapper {
                 display: flex;
@@ -347,6 +360,45 @@ export default {
                 }
             }
 
+            .instructor-container {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                top: 120px;
+                left: 0;
+            }
+
+        }
+
+        // Section - Testimonials
+        .testimonials-sect {
+            background-image: url('../assets/img/testimonial-background.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 200px 0 100px;
+
+            h2 {
+                margin-bottom: 30px;
+                font-size: $section_title_font_size;
+            }
+
+            .testimonial-img {
+                display: block;
+                width: 150px;
+                margin: 30px auto;
+            }
+
+            .testimonial-description {
+                width: 60%;
+                margin: 0 auto 40px;
+            }
+
+            .testimonial-name {
+                display: inline-block;
+                margin-bottom: 40px;
+            }
         }
     }
 

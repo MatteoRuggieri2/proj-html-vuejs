@@ -2,7 +2,7 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main :courses="coursesArray" />
+    <Main :courses="coursesArray" :instructors="instructorsArray" />
     <!-- <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" /> -->
 
   </div>
@@ -79,7 +79,24 @@ export default {
       //     name: 'accident rate',
       //     percentage: '0%'
       //   }
-      // ]
+      // ],
+      instructorsArray: [
+        {
+          name: 'Mike Hart',
+          img: 'instructor-mikehart.jpg',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+        {
+          name: 'John Smith',
+          img: 'instructor-johnsmith.jpg',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+        {
+          name: 'Angela Hart',
+          img: 'instructor-angelahart.jpg',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+      ],
     }
   }
 

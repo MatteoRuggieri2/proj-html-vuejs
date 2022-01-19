@@ -13,6 +13,11 @@
 }
 
 // Columns
+.col-center {
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
 .col-32 {
     width: 32%;
 }
@@ -71,4 +76,18 @@ a {
     border: 2px solid $third_color;
     padding: 10px 20px;
     color: $third_color;
+}
+
+// CARD  ----  posso fare un mixin
+.card-primary {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 6px solid $primary_color;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 gray;
+
+    // test
+    // border: 1px solid black;
 }
