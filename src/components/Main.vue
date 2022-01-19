@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 
-                <svg class="latestnews-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <svg class="decorative-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path fill="#ffffff" fill-opacity="1" d="M0,192L720,288L1440,192L1440,320L720,320L0,320Z"></path>
                 </svg>
                 
@@ -146,6 +146,20 @@
             </div>
         </section>
 
+        <!-- Section - News -->
+        <section class="news-sect">
+            <div class="container">
+                <div class="news-container">
+                    <h2>Latest News</h2>
+                    <div class="newscard-container">
+                        <NewsCard v-for="(element, index) in news" :key="index" :singleNews="element" />
+                        <img class="decorative-element" src="../assets/img/latestnews-bottom.png" alt="Elemento Decorativo">
+                    </div>
+                    <a class="btn btn-primary" href="#">More from the blog</a>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 </template>
@@ -154,18 +168,21 @@
 import FirstLessonRequest from "./FirstLessonRequest.vue";
 import SingleCourse from "./SingleCourse.vue";
 import InstructorCard from "./InstructorCard.vue";
+import NewsCard from "./NewsCard.vue";
 
 export default {
     name: 'Main',
     components: {
         FirstLessonRequest,
         SingleCourse,
-        InstructorCard
+        InstructorCard,
+        NewsCard
     },
     props: {
         courses: Array,
         percentagesArray: Array,
-        instructors: Array
+        instructors: Array,
+        news: Array
     }
 }
 </script>
@@ -330,7 +347,7 @@ export default {
                     }
                 }
 
-                .latestnews-bottom {
+                .decorative-bottom {
                     display: block;
                     position: absolute;
                     bottom: 0;
@@ -398,6 +415,41 @@ export default {
             .testimonial-name {
                 display: inline-block;
                 margin-bottom: 40px;
+            }
+        }
+
+        // Section - News
+        .news-sect {
+            background-image: url('../assets/img/latestnews-background.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 0 0 130px;
+
+            .news-container {
+                width: 100%;
+                padding: 50px 45px;
+                border-radius: 10px 10px 0 0;
+                background-color: white;
+                border-top: 6px solid $third_color;
+                text-align: center;
+                position: relative;
+                bottom: 40px;
+
+                h2 {
+                    font-size: $section_title_font_size;
+                    margin-bottom: 60px;
+                }
+
+                .newscard-container {
+                    display: flex;
+                }
+
+                .decorative-element {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
             }
         }
     }

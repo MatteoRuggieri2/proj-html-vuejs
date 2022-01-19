@@ -2,7 +2,7 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main :courses="coursesArray" :instructors="instructorsArray" />
+    <Main :courses="coursesArray" :instructors="instructorsArray" :news="latestNewsArray" />
     <!-- <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" /> -->
 
   </div>
@@ -96,6 +96,22 @@ export default {
           img: 'instructor-angelahart.jpg',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
+      ],
+      latestNewsArray: [
+        {
+          img: 'blog-choosecar-700x441.jpg',
+          name: 'What Car to Start With?',
+          date: 'February 7th, 2019',
+          comments: 0,
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+        {
+          img: 'blogpost-10and2-700x441.jpg',
+          name: 'Avada Driving School Expanding',
+          date: 'February 7th, 2019',
+          comments: 0,
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        }
       ],
     }
   }
