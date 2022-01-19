@@ -1,6 +1,7 @@
 <template>
     <footer>
-        <!-- Footer Bottom -->
+
+        <!-- Footer Top -->
         <div class="footer-top">
             <div class="container">
                 <div class="wrapper">
@@ -13,22 +14,27 @@
 
                     <!-- Column 2 -->
                     <div class="col-25">
-                        <h5>title</h5>
+                        <h5>CONTACT DETAILS</h5>
                         <ul>
-                            <li>
-                                <span><i>-icon-</i></span>
-                                <span>text</span>
+                            <li v-for="(element, index) in footerDetails" :key="index">
+                                <span class="icon"><i :class="element.icon"></i></span>
+                                <span>{{ element.text }}</span>
                             </li>
                         </ul>
                     </div>
 
                     <!-- Column 3 -->
                     <div class="col-25">
-                        <h5>title</h5>
+                        <h5>COURSES</h5>
                         <ul>
-                            <li>
-                                <span>-icon-</span>
-                                <span>text</span>
+                            <li v-for="(element, index) in footerCourses" :key="index">
+                                
+                                <span>
+                                    <a href="#">
+                                        <span class="icon"><i class="far fa-arrow-alt-circle-right"></i></span>
+                                        {{ element }}
+                                    </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -41,7 +47,7 @@
                         <div>
                             <img src="../assets/img/labels.png" alt="">
                         </div>
-                        <a href="#"></a>
+                        <a class="footer-btn btn btn-primary" href="#">book now</a>
                     </div>
 
                 </div>
@@ -51,7 +57,23 @@
         <!-- Footer Bottom -->
         <div class="footer-bottom">
             <div class="container">
+                <div class="wrapper">
 
+                    <!-- Copyright -->
+                    <div>
+                        <span>
+                            c Copyright 2012 - 2020 | Avada Theme By <span class="text-primary">ThemeFusion</span> | All Rights Reserved | Powered by <span class="text-primary">WordPress</span>
+                        </span>
+                    </div>
+
+                    <!-- Social Icon -->
+                    <div>
+                        <span><i class="fab fa-facebook-f"></i></span>
+                        <span><i class="fab fa-twitter"></i></span>
+                        <span><i class="fab fa-youtube"></i></span>
+                        <span><i class="fab fa-instagram"></i></span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -68,6 +90,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../style/variables.scss';
 
     footer {
 
@@ -86,7 +109,34 @@ export default {
 
                 .col-25 {
                     padding: 0 20px;
+
+                    ul {
+
+                        li {
+                            display: flex;
+
+                            .icon {
+                                margin-right: 15px;
+                            }
+
+                            a {
+                                color: $primary_color;
+                            }
+                        }
+                    }
+
+                    
                 }
+            }
+        }
+
+        .footer-bottom {
+            background-color: #1c1d1e;
+            padding: 40px 0;
+
+            .wrapper {
+                display: flex;
+                justify-content: space-between;
             }
         }
     }
