@@ -2,7 +2,7 @@
   <div id="app">
     
     <Header :headerLinks="headerLinksArray" />
-    <Main :courses="coursesArray" :instructors="instructorsArray" :news="latestNewsArray" />
+    <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" :instructors="instructorsArray" :news="latestNewsArray" />
     <!-- <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" /> -->
     <Footer :footerDetails="footerDetailsArray" :footerCourses="footerCoursesArray" />
 
@@ -71,20 +71,20 @@ export default {
           img: 'courses-instructor.jpg'
         },
       ],
-      // percentagesLabelsArray: [
-      //   {
-      //     name: 'pass rate',
-      //     percentage: '95%'
-      //   },
-      //   {
-      //     name: 'referral rate',
-      //     percentage: '100%'
-      //   },
-      //   {
-      //     name: 'accident rate',
-      //     percentage: '0%'
-      //   }
-      // ],
+      percentagesLabelsArray: [
+        {
+          name: 'pass rate',
+          percentage: '95'
+        },
+        {
+          name: 'referral rate',
+          percentage: '100'
+        },
+        {
+          name: 'accident rate',
+          percentage: '0'
+        }
+      ],
       instructorsArray: [
         {
           name: 'Mike Hart',

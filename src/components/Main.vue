@@ -74,78 +74,8 @@
                         </div>
                     </div>
 
-                    <!-- Percentage Cards -->
-                    <div class="percentage-card-container">
-                        <div class="col-32">
-                            <div class="card-primary">
-                                
-                                <div class="single-chart">
-                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
-                                    <path class="circle-bg"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <path class="circle"
-                                        stroke-dasharray="95, 100"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <text x="18" y="20.35" class="percentage">95%</text>
-                                    </svg>
-                                </div>
+                    <PercentageCard :percentages="percentagesArray" />
 
-                                <div class="percentage-name">pass rate</div>
-                            </div>
-                        </div>
-                        <div class="col-center">
-                            <div class="card-primary">
-
-                                <div class="single-chart">
-                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
-                                    <path class="circle-bg"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <path class="circle"
-                                        stroke-dasharray="100, 100"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <text x="18" y="20.35" class="percentage">100%</text>
-                                    </svg>
-                                </div>
-
-                                <div class="percentage-name">referral rate</div>
-                            </div>
-                        </div>
-                        <div class="col-32">
-                            <div class="card-primary">
-
-                                <div class="single-chart">
-                                    <svg viewBox="0 0 36 36" class="circular-chart primary-col">
-                                    <path class="circle-bg"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <path class="circle"
-                                        stroke-dasharray="0, 100"
-                                        d="M18 2.0845
-                                        a 15.9155 15.9155 0 0 1 0 31.831
-                                        a 15.9155 15.9155 0 0 1 0 -31.831"
-                                    />
-                                    <text x="18" y="20.35" class="percentage">0%</text>
-                                    </svg>
-                                </div>
-
-                                <div class="percentage-name">accident rate</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 
                 <svg class="decorative-bottom" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -229,6 +159,7 @@
 <script>
 import FirstLessonRequest from "./FirstLessonRequest.vue";
 import SingleCourse from "./SingleCourse.vue";
+import PercentageCard from "./PercentageCard.vue";
 import InstructorCard from "./InstructorCard.vue";
 import NewsCard from "./NewsCard.vue";
 
@@ -237,6 +168,7 @@ export default {
     components: {
         FirstLessonRequest,
         SingleCourse,
+        PercentageCard,
         InstructorCard,
         NewsCard,
     },
@@ -376,67 +308,6 @@ export default {
                     .courses-container {
                         display: flex;
                         justify-content: space-around;
-                    }
-                }
-
-                .percentage-card-container {
-                    width: 60%;
-                    display: flex;
-                    justify-content: space-between;
-                    position: absolute;
-                    top: 75%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    z-index: 2;
-
-                    // test
-                    // background-color: darkcyan;
-                    // border: 2px solid red;
-
-                    .card-primary {
-                        padding: 50px;
-
-                        .single-chart {
-                            width: 100%;
-                            justify-content: space-around ;
-                        }
-
-                        .circular-chart {
-                            display: block;
-                            margin: 10px auto;
-                            max-width: 100%;
-                            max-height: 250px;
-                        }
-
-                        .circle-bg {
-                            fill: none;
-                            stroke: #eee;
-                            stroke-width: 1.6;
-                        }
-
-                        .circle {
-                            fill: none;
-                            stroke-width: 1.6;
-                            stroke-linecap: round;
-                            animation: progress 1s ease-out forwards;
-                        }
-
-                        @keyframes progress {
-                            0% {
-                                stroke-dasharray: 0 100;
-                            }
-                        }
-
-                        .circular-chart.primary-col .circle {
-                            stroke: $primary_color;
-                        }
-
-                        .percentage {
-                            fill: #666;
-                            font-family: sans-serif;
-                            font-size: 0.5em;
-                            text-anchor: middle;
-                        }
                     }
                 }
 
