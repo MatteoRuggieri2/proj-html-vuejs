@@ -4,6 +4,7 @@
     <Header :headerLinks="headerLinksArray" />
     <Main :courses="coursesArray" :instructors="instructorsArray" :news="latestNewsArray" />
     <!-- <Main :courses="coursesArray" :percentagesArray="percentagesLabelsArray" /> -->
+    <Footer :footerDetails="footerDetailsArray" :footerCourses="footerCoursesArray" />
 
   </div>
 </template>
@@ -11,12 +12,14 @@
 <script>
 import Header from "./components/Header.vue";
 import Main from "./components/Main.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
     Main,
+    Footer
   },
   data: function() {
     return {
@@ -113,18 +116,25 @@ export default {
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         }
       ],
-      footerListsArray: [
+      footerDetailsArray: [
         {
-          name: 'contact details',
-          address: '12345 North Main Street, New York, NY 555555',
-          mail: '1.800.555.6789',
-          link: 'Theme-Fusion.com'
+          icon: 'fas fa-home',
+          text: '12345 North Main Street, New York, NY 555555'
         },
         {
-          name: 'Courses',
-          links: ['Pass Plus', 'Intensive Course', 'Automatic', 'Instructor Training']
+          icon: 'fas fa-phone',
+          text: '1.800.555.6789'
+        },
+        {
+          icon: 'far fa-envelope',
+          text: 'info@your-domain.com'
+        },
+        {
+          icon: 'fas fa-link',
+          text: 'Theme-Fusion.com'
         }
-      ]
+      ],
+      footerCoursesArray: ['Pass Plus', 'Intensive Course', 'Automatic', 'Instructor Training']
     }
   }
 

@@ -172,7 +172,6 @@
             </div>
         </section>
 
-
     </main>
 </template>
 
@@ -188,7 +187,7 @@ export default {
         FirstLessonRequest,
         SingleCourse,
         InstructorCard,
-        NewsCard
+        NewsCard,
     },
     props: {
         courses: Array,
