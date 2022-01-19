@@ -7,7 +7,7 @@
                 <div class="wrapper">
                     <span>We have a 95% Successful Pass Rate!</span>
                     <span>
-                        <span>-- icon -- </span>
+                        <span class="phone-icon"><i class="fas fa-phone"></i></span>
                         <span>Give us a call to book your tuition! 1-800-555-555</span>
                     </span>
                 </div>
@@ -28,7 +28,10 @@
                     <nav>
                         <ul>
                             <li v-for="(element, index) in headerLinks" :key="index">
-                                <a href="#">{{ element.name }}</a>
+                                <a :class="element.active ? 'active' : false" href="#">
+                                    {{ element.name }}
+                                </a>
+                                <span v-if="element.new" class="new-tag">new</span>
                             </li>
                         </ul>
                         <a class="btn btn-primary" href="#">book now</a>
@@ -61,20 +64,26 @@ export default {
 
         .header-top {
             padding: 10px 0;
-            background-color: black;
-            color: $secondary_color;
-            font-size: 14px;
+            background-color: #353637;
+            color: $primary_text_color;
+            font-size: 12px;
 
             .wrapper {
                 display: flex;
                 justify-content: space-between;
+
+                .phone-icon {
+                    margin-right: 15px;
+                }
             }
         }
 
         .header-bottom {
             padding: 30px 0;
-            background-color: rgba(0, 0, 0, 0.5);   // Prendere il colore principale dell'header e schiarirlo
+            background-color: #35363788;   // Prendere il colore principale dell'header e schiarirlo
             color: $secondary_color;
+            font-size: 14px;
+            font-weight: bold;
             
             .wrapper {
                 display: flex;
@@ -96,6 +105,25 @@ export default {
 
                         li {
                             margin: 0 20px;
+
+                            a {
+                                padding-bottom: 5px;
+                                &.active {
+                                    color: $primary_color;
+                                    border-bottom: 2px solid $primary_color;
+                                }
+
+                                &:hover {
+                                    color: $primary_color;
+                                }
+                            }
+
+                            .new-tag {
+                                background-color: $primary_color;
+                                font-size: 10px;
+                                padding: 2px 4px;
+                                border-radius: 4px;
+                            }
                         }
                     }
 
