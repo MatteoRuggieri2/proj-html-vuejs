@@ -77,8 +77,11 @@ a {
 
 .btn-primary {
     background-color: $primary-color;
-    padding: 10px 20px;
+    padding: 10px 25px;
     color: $secondary_color;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .btn-bckg-blue {

@@ -202,11 +202,12 @@ export default {
 
                     h1 {
                         font-size: 60px;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                     }
 
                     h3 {
                         font-size: 30px;
+                        font-weight: 400;
                     }
                 }
             }

@@ -41,6 +41,20 @@
             </div>
         </div>
 
+        <span class="sales-tags">
+            <span class="single-tag">
+                <div class="wallet-icon"><i class="fas fa-window-maximize"></i></div>
+                <span>Demos</span>
+            </span>
+            <span class="single-tag">
+                <div class="discounted-price">
+                    <span class="dollar">$</span>
+                    <span class="price">39</span>
+                </div>
+                <span>On Sale</span>
+            </span>
+        </span>
+
     </header>
 </template>
 
@@ -129,6 +143,54 @@ export default {
 
                     .btn {
                         margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .sales-tags {
+            display: inline-block;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 120px;
+            right: 0;
+            z-index: 20;
+
+            .single-tag {
+                display: inline-block;
+                width: 65px;
+                height: 65px;
+                margin: 5px 10px;
+                padding: 10px;
+                background-color: white;
+                font-size: 11px;
+                font-weight: 600;
+                border-radius: 7px;
+                color: #33475b;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                // test
+                border: 1px solid black;
+
+                .wallet-icon {
+                    font-size: 20px;
+                    color: #33475b;
+                }
+
+                .discounted-price {
+                    color: $primary_color;
+
+                    .dollar {
+                        font-size: 16px;
+                        vertical-align: top;
+                    }
+
+                    .price {
+                        font-size: 24px;
                     }
                 }
             }
