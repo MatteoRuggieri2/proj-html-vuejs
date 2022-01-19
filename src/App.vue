@@ -113,11 +113,21 @@ export default {
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         }
       ],
+      footerListsArray: [
+        {
+          name: 'contact details',
+          address: '12345 North Main Street, New York, NY 555555',
+          mail: '1.800.555.6789',
+          link: 'Theme-Fusion.com'
+        },
+        {
+          name: 'Courses',
+          links: ['Pass Plus', 'Intensive Course', 'Automatic', 'Instructor Training']
+        }
+      ]
     }
   }
 
-  // ricordati di fare i data con le props per header e footer
-  // installare fontawesome
 };
 </script>
 

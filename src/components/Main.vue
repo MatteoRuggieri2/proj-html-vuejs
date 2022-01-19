@@ -160,6 +160,18 @@
             </div>
         </section>
 
+        <!-- Section - Newsletter -->
+        <section class="newsletter-sect">
+            <div class="container">
+                <h3>Sign up to our Newsletter</h3>
+                <div class="container50">
+                    <input class="input-100" type="text">
+                    <a class="btn button-100 btn-primary" href="#">subscribe</a>
+                    <span class="subscription-description">(We do not share your data with anybody, and only use it for its intended purpose)</span>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 </template>
@@ -452,6 +464,30 @@ export default {
                 }
             }
         }
+
+        // Section - Newsletter
+        .newsletter-sect {
+            text-align: center;
+            background-image: url('../assets/img/newsletter_background.jpg');
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+
+            h3 {
+                font-size: 30px;
+                padding-bottom: 40px;
+            }
+
+            a {
+                margin-bottom: 30px;
+            }
+
+            .subscription-description {
+                font-size: 13px;
+
+            }
+        }
+
     }
 
 </style>

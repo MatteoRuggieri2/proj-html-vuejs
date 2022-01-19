@@ -3,10 +3,10 @@
         <div class="first-lesson-request">
             <h2>First Lesson Free!</h2>
             <span class="request-description">When you make a block booking with us your first lesson is included free.</span>
-            <input type="text" placeholder="Your Name*">
-            <input type="email" placeholder="Email*">
-            <input type="text" placeholder="Telephone">
-            <input type="text" placeholder="Location">
+            <input class="input-100" type="text" placeholder="Your Name*">
+            <input class="input-100" type="email" placeholder="Email*">
+            <input class="input-100" type="text" placeholder="Telephone">
+            <input class="input-100" type="text" placeholder="Location">
             <a class="btn btn-primary" href="#">request a callback</a>
         </div>
     </div>
@@ -41,15 +41,6 @@ export default {
             .request-description {
                 display: inline-block;
                 margin-bottom: 30px;
-            }
-
-            input {
-                display: block;
-                width: 100%;
-                margin-bottom: 30px;
-                padding: 15px 10px;
-                border-radius: 5px;
-                border: 1px solid gray;
             }
         }
     }
